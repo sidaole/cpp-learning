@@ -1,13 +1,15 @@
 #include <iostream>
-#include <vector>
+using namespace std;
 
-int main() {
-    std::vector<int> nums = {1, 2, 3, 4, 5};
-    int sum = 0;
-    for (int n : nums) {
-        sum += n;
-    }
-    std::cout << "Sum = " << sum << std::endl;
-    std::cout << "Compiler OK!" << std::endl;
-    return 0;
+#include <iostream>
+#include <string>
+
+bool isPrime(int n) {
+        for (int i=2;i*i<=n;i++) {
+            if (n%i==0) {
+                return false;
+                break;
+            }
+        }
+        return true;
 }
