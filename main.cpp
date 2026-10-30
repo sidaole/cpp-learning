@@ -1,15 +1,16 @@
 #include <iostream>
-using namespace std;
+#include <vector>
 
-#include <iostream>
-#include <string>
-
-bool isPrime(int n) {
-        for (int i=2;i*i<=n;i++) {
-            if (n%i==0) {
-                return false;
-                break;
-            }
+bool isPalindrome(const std::string& s) {
+    int left = 0, right = s.length() - 1;
+    while (left < right) {
+        if (s[left] != s[right]) {
+            return false;
         }
-        return true;
+        else {
+            ++left;
+            --right;
+        }
+    }
+    return true;
 }
